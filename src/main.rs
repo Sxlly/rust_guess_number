@@ -6,7 +6,7 @@ use std::io::stdin;
 
 fn main() {
 
-    `_outer_loop: loop {
+    '_outer_loop: loop {
 
         let _number_to_guess: u32 = 10;
 
@@ -21,14 +21,14 @@ fn main() {
             let _userInput = stdin().read_line(&mut line);
 
             //assign users input to guess variable trim string and parse it to have it as an integer
-            let guess: Option<u32> = _userInput.ok().map_or(None, |_| line.trim().parse().ok());
+            let guess: Option<i32> = _userInput.ok().map_or(None, |_| line.trim().parse().ok());
 
             match _guess{
 
                 None => println!("you MUST enter a number!: "),
                 Some(n) if n == _number_to_guess => {
                     println!("Thats Correct!");
-                    break `_outer_loop;
+                    break '_outer_loop;
                 }
 
                 Some(n) if n < _number_to_guess => println!("Lower!"),
