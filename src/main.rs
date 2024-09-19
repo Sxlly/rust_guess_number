@@ -14,13 +14,14 @@ fn main() {
 
         loop {
 
-            //declare an emoty string variable
+            //declare an empty string variable
             let mut line = String::new();
 
             //Read input from user in terminal
             let _userInput = stdin().read_line(&mut line);
 
-            let guess: Option<u32> = _userInput.ok()
+            //assign users input to guess variable trim string and parse it to have it as an integer
+            let guess: Option<u32> = _userInput.ok().map_or(None, |_| line.trim().parse().ok());
 
         }
     }
