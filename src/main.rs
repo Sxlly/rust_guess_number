@@ -23,6 +23,15 @@ fn main() {
             //assign users input to guess variable trim string and parse it to have it as an integer
             let guess: Option<u32> = _userInput.ok().map_or(None, |_| line.trim().parse().ok());
 
+            match _guess{
+
+                None => println!("you MUST enter a number!: "),
+                some(n) if n == _number_to_guess => {
+                    println!("Thats Correct!");
+                    break _outer_loop;
+                }
+            }
+
         }
     }
     
