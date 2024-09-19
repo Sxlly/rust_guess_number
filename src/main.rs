@@ -30,6 +30,10 @@ fn main() {
                     println!("Thats Correct!");
                     break _outer_loop;
                 }
+
+                Some(n) if n < _number_to_guess => println!("Lower!"),
+                Some(n) if n > _number_to_guess => println!("Higher!"),
+                Some(_) => println!("Error!")
             }
 
         }
