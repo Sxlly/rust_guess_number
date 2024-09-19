@@ -33,9 +33,9 @@ fn main() {
                     break '_outer_loop;
                 }
 
-                Some(n) if n < _number_to_guess => println!("Higher!"),
-                Some(n) if n > _number_to_guess => println!("Lower!"),
-                Some(_) => println!("Error!")
+                Some(n) if n < _number_to_guess => println!("Higher!"), //if user guess is less than number to guess print higher
+                Some(n) if n > _number_to_guess => println!("Lower!"), //if user guess is more than number to guess than print lower
+                Some(_) => println!("Error!") //else print error
             }
 
         }
