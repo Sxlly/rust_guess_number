@@ -2,7 +2,12 @@
 // COMP2007 - Curtin University
 // 19/09/2024
 
-use std::io::stdin;
+
+
+use std::io::stdin; //import standard library
+
+
+
 
 fn main() {
 
