@@ -18,10 +18,10 @@ fn main() {
             let mut line = String::new();
 
             //Read input from user in terminal
-            let _userInput = stdin().read_line(&mut line);
+            let _user_input = stdin().read_line(&mut line);
 
             //assign users input to guess variable trim string and parse it to have it as an integer
-            let _guess: Option<i32> = _userInput.ok().map_or(None, |_| line.trim().parse().ok());
+            let _guess: Option<i32> = _user_input.ok().map_or(None, |_| line.trim().parse().ok());
 
             //match functionality to see what the user inputted _guess matches what condition 
             match _guess{
